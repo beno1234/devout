@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        "fundo": "url('../../public/fundo-header.jpg')",
+        'parallax': "url('../../public/bg_parallax.jpg')",
+      }
     },
   },
   plugins: [],
