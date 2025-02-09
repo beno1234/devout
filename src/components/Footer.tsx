@@ -25,7 +25,7 @@ export default function Footer() {
         <iframe
           title="Google Maps"
           className="w-80 h-48 rounded-lg"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.144039558666!2d-46.56656322557239!3d-23.563062978796654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e9d42f722e1%3A0x5f62d8f2b9e96bb1!2sDevout%20Auditoria%20e%20Contabilidade!5e0!3m2!1sen!2sbr!4v1707324033761!5m2!1sen!2sbr"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Devout%20Auditoria+(Devout%20Auditoria%20e%20Contabilidade)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           allowFullScreen
           loading="lazy"
         ></iframe>
