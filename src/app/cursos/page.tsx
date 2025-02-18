@@ -12,6 +12,8 @@ import Rotina from '../../../public/rotinasdeencerramentodebalanço.jpg';
 import { StaticImageData } from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Link from 'next/link';
+
 interface CursoCard {
   id: number;
   title: string;
@@ -19,6 +21,7 @@ interface CursoCard {
   subtitle: string;
   value: string;
 }
+
 export default function Curso() {
   const CursoCard: CursoCard[] = [
     {
@@ -42,7 +45,7 @@ export default function Curso() {
       title: 'Contabilidade Tributária na Atividade Imobiliaria',
       image: Imobiliaria,
       subtitle:
-        'Orientar os participantes sobre a contabilidade voltada para o setor imobiliário. Demonstrar o momento de reconhecimento da receita, custo e despesas. Cálculo dos tributos correntes e diferidos, orientação sobre escrituração das SCP e SPE;',
+        'Orientar os participantes sobre a contabilidade voltada para o setor imobiliário. Demonstrar o momento de reconhecimento da receita, custo e despesas. Cálculo dos tributos correntes e diferidos, orientação sobre escrituração das SCP e SPE.',
       value: '497,00',
     },
     {
@@ -66,7 +69,7 @@ export default function Curso() {
       title: 'Transfer Price',
       image: Transfer,
       subtitle:
-        'Fornecer a conceituação do Transfer Price (Arms Lenght Principle) orientar os participantes sobre os riscos da não elaboração do cálculo do preço de transferência; desenvolvimento dos cálculos para os métodos na importação como na exportação de bens, serviços e direitos; orientação sobre o melhor método a ser utilizados (o que não causa ajustes ou que causa o menor ajuste), orientação sobre quem está obrigado a efetuar o cálculo do Transfer Price, apresentar as alterações na legislação do transfer price a valer a partir do ano-base de 2019 e discussão sobre pontos polémicos das regras do preço de transferência.',
+        'Fornecer a conceituação do Transfer Price (Arms Lenght Principle) orientar os participantes sobre os riscos da não elaboração do cálculo do preço de transferência; desenvolvimento dos cálculos para os métodos na importação como na exportação de bens, serviços e direitos.',
       value: '597,00',
     },
     {
@@ -74,7 +77,7 @@ export default function Curso() {
       title: 'Lucro real Lucro presumido e Lucro Arbitrado',
       image: Presumido,
       subtitle:
-        'Apurar a base de cálculo do imposto de renda das pessoas jurídicas tributadas pelo lucro real, e lucro presumido; Conhecer as principais despesas, custos e provisões que influenciam no cálculo do imposto de renda, visando analisar a dedutibilidade destas na base do IRPJ/CSLL, com abordagem teórica e prática. Avaliar o efeito da existência de prejuízos fiscais operacionais e não operacionais na escolha do regime tributário.',
+        'Apurar a base de cálculo do imposto de renda das pessoas jurídicas tributadas pelo lucro real, e lucro presumido; Conhecer as principais despesas, custos e provisões que influenciam no cálculo do imposto de renda, visando analisar a dedutibilidade destas na base do IRPJ/CSLL.',
       value: '797,00',
     },
     {
@@ -82,7 +85,7 @@ export default function Curso() {
       title: 'Lucro Real avançado',
       image: Real,
       subtitle:
-        'Apresentar de forma prática a apuração do Imposto de Renda das Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro (CSLL) das respectivas empresas tributadas pelo Lucro Real , promovendo o conhecimento necessário com base na Lei n° 12.973/2014 que trouxe alterações na legislação tributária federal a partir de 2015 e suas recentes atualizações IN 1515 e IN 1700, munindo o profissional com ferramentas que possibilitam analisar os riscos fiscais e aplicar um correto planejamento tributário.',
+        'Apresentar de forma prática a apuração do Imposto de Renda das Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro (CSLL) das respectivas empresas tributadas pelo Lucro Real.',
       value: '1.379,00',
     },
     {
@@ -90,10 +93,20 @@ export default function Curso() {
       title: 'Rotina de encerramento de balanço',
       image: Rotina,
       subtitle:
-        'O curso visa fornecer ao participante subsídios para o correto fechamento das Demonstrações Contábeis com base nas novas regras contábeis, orientando sobre as regras de avaliação de ativos, passivos, periodicidade do balancete de verificação, amarração sobre as regras contábeis (ECD) x regras fiscais (ECF), incluindo a questão da distribuição de Lucros e Dividendos.',
+        'O curso visa fornecer ao participante subsídios para o correto fechamento das Demonstrações Contábeis com base nas novas regras contábeis, orientando sobre as regras de avaliação de ativos, passivos, periodicidade do balancete de verificação.',
       value: '497,00',
     },
   ];
+
+  const generatSlug = (title: string) => {
+    return title
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^\w\s-]/g, '')
+      .replace(/[\s_-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  };
   return (
     <>
       <Header />
@@ -103,17 +116,9 @@ export default function Curso() {
             Alguns de nossos Cursos
           </h2>
         </div>
-
         <section className="flex flex-wrap justify-center gap-4 my-12">
           {CursoCard.map((card, index) => (
-            <InfoCard
-              key={index}
-              title={card.title}
-              subtitle={card.subtitle}
-              image={card.image}
-              value={card.value}
-              id={card.id}
-            />
+            <InfoCard slug={generatSlug(card.title)} key={index} {...card} />
           ))}
         </section>
       </main>
@@ -122,8 +127,14 @@ export default function Curso() {
   );
 }
 
-const InfoCard = ({ subtitle, value, image, title }: CursoCard) => (
-  <article className="w-full max-w-sm p-6 border rounded bg-white shadow-lg flex flex-col justify-between relative min-h-[450px]">
+const InfoCard = ({
+  subtitle,
+  value,
+  image,
+  title,
+  slug,
+}: CursoCard & { slug: string }) => (
+  <article className="w-full max-w-sm p-6 border rounded bg-white shadow-lg flex flex-col justify-between relative min-h-[500px]">
     <div>
       <div className="mb-4">
         <Image
@@ -134,15 +145,16 @@ const InfoCard = ({ subtitle, value, image, title }: CursoCard) => (
           className="rounded-md object-cover w-full h-auto"
         />
       </div>
-      <h2 className="text-lg text-[#BA9F3C] font-semibold text-center mb-2">
+      <h2 className="text-lg text-[#BA9F3C] font-semibold text-center mb-4 min-h-[60px] flex items-center justify-center">
         {title}
       </h2>
       <p className="text-gray-600 text-sm md:text-base text-justify mb-8">
         {subtitle}
       </p>
     </div>
-
-    {/* Valor centralizado com espaçamento */}
+    <Link href={`/cursos/${slug}`}>
+      <button>Teste</button>
+    </Link>
     <div className="mt-auto pt-4 text-center">
       <p className="text-lg font-semibold text-green-600">{value}</p>
     </div>
