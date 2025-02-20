@@ -29,7 +29,7 @@ export default function Sobre() {
     <>
       <Header />
 
-      <main className="py-16 container mx-auto max-w-4xl">
+      <main className="py-16 px-4 container mx-auto max-w-4xl">
         <section className="text-gray-800 space-y-6">
           <p className="text-lg font-semibold leading-relaxed">
             A Devout Auditoria e Contabilidade Ltda oferece aos seus clientes um
@@ -50,7 +50,7 @@ export default function Sobre() {
           </p>
         </section>
 
-        <section className="flex flex-nowrap justify-center gap-4 my-12">
+        <section className="flex flex-wrap justify-center gap-8 my-12">
           {cards.map((card, index) => (
             <InfoCard
               key={index}
@@ -67,7 +67,7 @@ export default function Sobre() {
 }
 
 const InfoCard = ({ title, description }: CardProps) => (
-  <article className="w-96 p-6 border rounded bg-white shadow-lg text-center">
+  <article className="w-full sm:w-96 p-6 border rounded bg-white shadow-lg text-center">
     <h2 className="text-lg text-[#BA9F3C] font-semibold">{title}</h2>
     <p className="text-gray-600 text-sm md:text-base">{description}</p>
   </article>

@@ -3,6 +3,7 @@ import SectionWelcome from './Home/sectionWelcome/SectionWelcome';
 import SobreSection from './Home/sobreSection/SobreSection';
 import CursoSection from './Home/cursoSection/CursoSection';
 import Footer from '@/components/Footer';
+import Consulta from './Home/consultas/Consulta';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <SectionWelcome />
       <SobreSection />
       <CursoSection />
+      <Consulta />
       <Footer />
     </>
   );

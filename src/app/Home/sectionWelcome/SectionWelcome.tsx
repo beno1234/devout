@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import section1 from '/public/imagem-home1.jpg';
+import section1 from '/public/lourivaldo.jpeg';
 
 const SectionWelcome = () => {
   return (
@@ -24,13 +24,14 @@ const SectionWelcome = () => {
         </div>
 
         <div className="flex justify-center">
-          <Image
-            src={section1}
-            alt="Atender bem, atender sempre"
-            className="w-full max-w-sm sm:max-w-md lg:max-w-lg h-auto shadow-lg"
-            priority
-          />
-        </div>
+  <Image
+    src={section1}
+    alt="Atender bem, atender sempre"
+    className="w-full h-full max-w-sm sm:max-w-md lg:max-w-lg object-cover shadow-lg"
+    priority
+  />
+</div>
+
       </div>
     </section>
   );

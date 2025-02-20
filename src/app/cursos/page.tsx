@@ -142,7 +142,7 @@ const InfoCard = ({
           alt={title}
           width={300}
           height={200}
-          className="rounded-md object-cover w-full h-[200px] md:h-[250px] lg:h-[300px] transition-all duration-300 group-hover:opacity-80"
+          className="rrounded-md object-cover w-full h-auto"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
           <Link href={`/cursos/${slug}`}>

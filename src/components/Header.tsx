@@ -13,18 +13,18 @@ const Header = () => {
       <header className="text-white p-4 absolute top-0 left-0 w-full z-50 bg-transparent">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link href="/">
-          <Image src={devout} alt="Logo" className="w-32 md:w-36 lg:w-40" />
+          <Image src={devout} alt="Logo" className="w-32 md:w-36 lg:w-24" />
           </Link>
           
           {/* Menu de Navegação - Desktop */}
-          <div className="hidden md:flex space-x-8 text-[#BA9F3C] font-semibold">
-            <a href="#services" className="hover:text-gray-300 transition-all duration-300">Júridico</a>
-            <a href="#about" className="hover:text-gray-300 transition-all duration-300">Serviços</a>
+          <div className="hidden md:flex space-x-8 text-[#BA9F3C] font-semibold items-center">
+            <a href="https://www.cavalcanteproenca.com.br/" target='_blank' className="hover:text-gray-300 transition-all duration-300">Júridico</a>
+            <a href="/servicos" className="hover:text-gray-300 transition-all duration-300">Serviços</a>
             <a href="/sobre" className="hover:text-gray-300 transition-all duration-300">Sobre Nós</a>
             <a href="/cursos" className="hover:text-gray-300 transition-all duration-300">Cursos</a>
-            <a href="#contact" className="hover:text-gray-300 transition-all duration-300">Livros</a>
+            {/* <a href="#contact" className="hover:text-gray-300 transition-all duration-300">Livros</a> */}
             <a
-              href="#contact"
+              href="https://api.whatsapp.com/send?phone=5511911227079&text=Ol%C3%A1,%20estou%20entrando%20em%20contato%20pelo%20site!"
               className="hover:text-gray-300 border rounded-full px-6 py-2 transition-all duration-300"
             >
               Quero um orçamento
@@ -93,11 +93,11 @@ const Header = () => {
       {/* Seção Principal */}
       <section className="bg-fundo bg-no-repeat bg-cover text-white z-10 h-screen flex items-center justify-center text-left w-full">
         <div className="text-center px-6 md:px-12">
-          <h2 className="text-5xl font-extrabold text-[#BA9F3C] sm:text-6xl md:text-7xl leading-tight">
+          <h2 className="text-5xl font-extrabold text-[#BA9F3C] sm:text-6xl md:text-5xl leading-tight">
             O nosso compromisso é <br />
             com o seu sucesso
           </h2>
-          <p className="mt-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light leading-relaxed">
+          <p className="mt-6 text-xl sm:text-2xl md:text-3xl lg:text-xl font-light leading-relaxed">
             Ética, confidencialidade, responsabilidade, qualidade e segurança <br /> nas informações
           </p>
         </div>
