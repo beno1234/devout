@@ -56,15 +56,15 @@ const cards: CardProps[] = [
 
 const SobreSection = () => {
   return (
-    <section id="about" className="py-16 bg-white">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-semibold text-gray-800 mb-9">Sobre Nós</h2>
       </div>
 
-      <div className="bg-parallax bg-cover bg-fixed bg-center p-20">
+      <div className="bg-parallax bg-cover bg-fixed bg-center p-16 ">
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
           {cards.map((card, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 max-w-xl sm:max-w-md md:max-w-none">
+            <div key={index} className="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105">
               {card.icon}
               <h3 className="text-xl font-semibold text-[#BA9F3C]">{card.title}</h3>
               <p className="mt-4 text-gray-600 mb-10">{card.description}</p>
