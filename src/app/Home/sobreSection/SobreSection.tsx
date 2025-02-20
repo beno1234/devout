@@ -61,7 +61,7 @@ const SobreSection = () => {
         <h2 className="text-3xl font-semibold text-gray-800 mb-9">Sobre Nós</h2>
       </div>
 
-      <div className="bg-parallax bg-cover bg-fixed bg-center p-16 ">
+      <div className="bg-parallax bg-cover bg-fixed bg-center p-10 ">
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
           {cards.map((card, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105">
