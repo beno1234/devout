@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 export default function Page() {
   const { slug } = useParams();
 
-  // Garantir que o tipo do curso seja validado com a interface 'Curso'
   const curso: Curso | undefined =
     slug && typeof slug === 'string'
       ? Tributario.find((c) => c.slug === slug)
@@ -35,7 +34,6 @@ export default function Page() {
               </p>
             </div>
 
-            {/* Informações Gerais */}
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <div>
                 <h2 className="text-xl font-semibold text-[#0a1d37]">
@@ -61,7 +59,6 @@ export default function Page() {
               </div>
             </div>
 
-            {/* A Quem se Destina */}
             <div className="mb-16">
               <h2 className="text-2xl font-semibold text-[#0a1d37]">
                 A quem se destina
@@ -71,7 +68,6 @@ export default function Page() {
               </p>
             </div>
 
-            {/* Conteúdo Programático com Acordeão */}
             <div className="space-y-6">
               <h2 className="text-2xl font-semibold text-[#0a1d37]">
                 Conteúdo Programático
@@ -94,7 +90,6 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Botão de Inscrição */}
             <div className="mt-12 text-center">
               <a
                 href="#"

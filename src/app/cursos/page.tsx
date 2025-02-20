@@ -134,16 +134,23 @@ const InfoCard = ({
   title,
   slug,
 }: CursoCard & { slug: string }) => (
-  <article className="w-full max-w-sm p-6 border rounded bg-white shadow-lg flex flex-col justify-between relative min-h-[500px]">
+  <article className="w-full max-w-sm p-6 border rounded bg-white shadow-lg flex flex-col justify-between relative min-h-[500px] transition-transform">
     <div>
-      <div className="mb-4">
+      <div className="mb-4 relative group">
         <Image
           src={image}
           alt={title}
           width={300}
           height={200}
-          className="rounded-md object-cover w-full h-auto"
+          className="rounded-md object-cover w-full h-[200px] md:h-[250px] lg:h-[300px] transition-all duration-300 group-hover:opacity-80"
         />
+        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+          <Link href={`/cursos/${slug}`}>
+            <button className="bg-[#BA9F3C] text-white px-6 py-2 rounded-md font-semibold text-lg transition-all duration-300 hover:bg-[#8A7A3D]">
+              Saiba Mais
+            </button>
+          </Link>
+        </div>
       </div>
       <h2 className="text-lg text-[#BA9F3C] font-semibold text-center mb-4 min-h-[60px] flex items-center justify-center">
         {title}
@@ -152,9 +159,6 @@ const InfoCard = ({
         {subtitle}
       </p>
     </div>
-    <Link href={`/cursos/${slug}`}>
-      <button>Teste</button>
-    </Link>
     <div className="mt-auto pt-4 text-center">
       <p className="text-lg font-semibold text-green-600">{value}</p>
     </div>
