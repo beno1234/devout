@@ -93,7 +93,7 @@ const Header = () => {
       {/* Seção Principal */}
       <section className="bg-fundo bg-no-repeat bg-cover text-white z-10 h-screen flex items-center justify-center text-left w-full">
         <div className="text-center px-6 md:px-12">
-          <h2 className="text-2xl font-extrabold text-[#BA9F3C] sm:text-6xl md:text-5xl leading-tight">
+          <h2 className="text-3xl font-extrabold text-[#BA9F3C] sm:text-6xl md:text-5xl leading-tight">
             O nosso compromisso é <br />
             com o seu sucesso
           </h2>
