@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; /* Você pode ajustar conforme necessário */
+  }
+  
