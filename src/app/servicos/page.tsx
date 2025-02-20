@@ -117,7 +117,7 @@ export default function Servicos() {
       <main className="py-16">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-semibold text-gray-800 mb-9">
-            Alguns de nossos Cursos
+            Alguns de nossos serviços
           </h2>
         </div>
 
