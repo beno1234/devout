@@ -3,6 +3,56 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandshake } from '@fortawesome/free-regular-svg-icons';
 import { faEdit } from '@fortawesome/free-regular-svg-icons';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
+import { JSX } from 'react/jsx-runtime';
+
+interface CardProps {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+  services: string[];
+}
+
+const cards: CardProps[] = [
+  {
+    icon: <FontAwesomeIcon icon={faHandshake} className="text-[#141e28] w-20 mx-auto mb-6" />,
+    title: 'Serviços especializados',
+    description: 'Oferecemos serviços especializados de consultoria e auditoria nas áreas contábil, tributária, trabalhista e societária e prestamos serviços como:',
+    services: [
+      'Planejamento Estratégico;',
+      'Desenvolvimento Organizacional;',
+      'Gestão Financeira;',
+      'Saneamento Financeiro e Tributário;',
+      'Planejamento Tributário;',
+      'Auditoria Financeira e Contábil.',
+    ]
+  },
+  {
+    icon: <FontAwesomeIcon icon={faEdit} className="text-[#141e28] w-20 mx-auto mb-6" />,
+    title: 'Fiscal e Tributário',
+    description: 'Estamos preparados para acompanhar e apurar continuamente os impostos emitidos pelo seu negócio de forma a reduzir ao máximo a carga tributária da sua empresa.',
+    services: [
+      'Rotinas fiscais e tributárias;',
+      'Apuração de Impostos Federais, Estaduais e Municipais;',
+      'Escrituração de Livros Fiscais;',
+      'Emissão de Guias;',
+      'Acompanhamento de Legislação e Fiscalizações;',
+      'Defesas de Infrações.'
+    ]
+  },
+  {
+    icon: <FontAwesomeIcon icon={faCoins} className="text-[#141e28] w-20 mx-auto mb-6" />,
+    title: 'Assesoria contábil',
+    description: 'Auxiliamos nas tomadas de decisões, análise e interpretação de todos os fatos que envolvem a rotina de trabalho da sua empresa diariamente. Elaboramos todos os demonstrativos contábeis para ajudar o seu negócio a manter o crescimento de forma sustentável.',
+    services: [
+      'Escrituração Contábil;',
+      'Livro Caixa;',
+      'Emissão de Demonstrações Contábeis;',
+      'Livro Diário;',
+      'Livro Razão;',
+      'Cadastros em Geral.'
+    ]
+  }
+];
 
 const SobreSection = () => {
   return (
@@ -13,88 +63,18 @@ const SobreSection = () => {
 
       <div className="bg-parallax bg-cover bg-fixed bg-center p-20">
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <FontAwesomeIcon
-              icon={faHandshake}
-              className="text-[#141e28] w-20 mx-auto mb-6"
-            />
-            <h3 className="text-xl font-semibold text-[#BA9F3C]">
-              Serviços especializados
-            </h3>
-            <p className="mt-4 text-gray-600 mb-10">
-              Oferecemos serviços especializados de consultoria e auditoria nas
-              áreas contábil, tributária, trabalhista e societária e prestamos
-              serviços como:
-            </p>
-            <ul className="text-gray-600">
-              <li>Planejamento Estratégico;</li>
-
-              <li> Desenvolvimento Organizacional;</li>
-
-              <li> Gestão Financeira;</li>
-
-              <li> Saneamento Financeiro e Tributário;</li>
-
-              <li> Planejamento Tributário;</li>
-
-              <li> Auditoria Financeira e Contábil.</li>
-            </ul>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <FontAwesomeIcon
-              icon={faEdit}
-              className="text-[#141e28] w-20 mx-auto mb-6"
-            />
-            <h3 className="text-xl font-semibold text-[#BA9F3C]">
-              Fiscal e Tributário
-            </h3>
-            <p className="mt-4 text-gray-600 mb-10">
-              Estamos preparados para acompanhar e apurar continuamente os
-              impostos emitidos pelo seu negócio de forma a reduzir ao máximo a
-              carga tributária da sua empresa.
-            </p>
-            <ul className="text-gray-600">
-              <li>Rotinas fiscais e tributárias;</li>
-
-              <li>Apuração de Impostos Federais, Estaduais e Municipais;</li>
-
-              <li>Escrituração de Livros Fiscais;</li>
-
-              <li>Emissão de Guias;</li>
-
-              <li>Acompanhamento de Legislação e Fiscalizações;</li>
-
-              <li>Defesas de Infrações.</li>
-            </ul>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <FontAwesomeIcon
-              icon={faCoins}
-              className="text-[#141e28] w-20 mx-auto mb-6"
-            />
-            <h3 className="text-xl font-semibold text-[#BA9F3C]">
-              Assesoria contábil
-            </h3>
-            <p className="mt-4 text-gray-600 mb-10">
-              Auxiliamos nas tomadas de decisões, análise e interpretação de
-              todos os fatos que envolvem a rotina de trabalho da sua empresa
-              diariamente. Elaboramos todos os demonstrativos contábeis para
-              ajudar o seu negócio a manter o crescimento de forma sustentável.
-            </p>
-            <ul className="text-gray-600">
-              <li>Escrituração Contábil;</li>
-
-              <li>Livro Caixa;</li>
-
-              <li>Emissão de Demonstrações Contábeis;</li>
-
-              <li>Livro Diário;</li>
-
-              <li>Livro Razão;</li>
-
-              <li>Cadastros em Geral.</li>
-            </ul>
-          </div>
+          {cards.map((card, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 max-w-xl sm:max-w-md md:max-w-none">
+              {card.icon}
+              <h3 className="text-xl font-semibold text-[#BA9F3C]">{card.title}</h3>
+              <p className="mt-4 text-gray-600 mb-10">{card.description}</p>
+              <ul className="text-gray-600">
+                {card.services.map((service, idx) => (
+                  <li key={idx}>{service}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

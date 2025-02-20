@@ -75,13 +75,13 @@ const Header = () => {
                 />
               </svg>
             </button>
-            <a href="#services" className="text-[#BA9F3C] hover:text-gray-300 text-2xl font-semibold">Júridico</a>
-            <a href="#about" className="text-[#BA9F3C] hover:text-gray-300 text-2xl font-semibold">Serviços</a>
+            <a href="https://www.cavalcanteproenca.com.br/" className="text-[#BA9F3C] hover:text-gray-300 text-2xl font-semibold">Júridico</a>
+            <a href="/servicos" className="text-[#BA9F3C] hover:text-gray-300 text-2xl font-semibold">Serviços</a>
             <a href="/sobre" className="text-[#BA9F3C] hover:text-gray-300 text-2xl font-semibold">Sobre Nós</a>
             <a href="/cursos" className="text-[#BA9F3C] hover:text-gray-300 text-2xl font-semibold">Cursos</a>
-            <a href="#contact" className="text-[#BA9F3C] hover:text-gray-300 text-2xl font-semibold">Livros</a>
+            {/* <a href="#contact" className="text-[#BA9F3C] hover:text-gray-300 text-2xl font-semibold">Livros</a> */}
             <a
-              href="#contact"
+              href="https://api.whatsapp.com/send?phone=5511911227079&text=Ol%C3%A1,%20estou%20entrando%20em%20contato%20pelo%20site!"
               className="text-[#BA9F3C] border rounded-full px-8 py-3 text-xl font-semibold transition-all duration-300"
             >
               Quero um orçamento
