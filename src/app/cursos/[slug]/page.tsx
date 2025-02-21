@@ -92,7 +92,8 @@ export default function Page() {
 
             <div className="mt-12 text-center">
               <a
-                href="#"
+                href={curso.link}
+                target='_blank'
                 className="bg-[#BA9F3C] text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-[#a27e2e] transition duration-300"
               >
                 Inscreva-se Agora

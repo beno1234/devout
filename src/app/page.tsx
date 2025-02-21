@@ -4,6 +4,7 @@ import SobreSection from './Home/sobreSection/SobreSection';
 import CursoSection from './Home/cursoSection/CursoSection';
 import Footer from '@/components/Footer';
 import Consulta from './Home/consultas/Consulta';
+import ServicesSection from './Home/servicesSection/ServicesSection';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <SobreSection />
       <CursoSection />
       <Consulta />
+      <ServicesSection />
       <Footer />
     </>
   );

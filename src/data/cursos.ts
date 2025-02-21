@@ -5,6 +5,7 @@ export interface Curso {
   instrutor: string;
   modalidade: string;
   objetivo: string;
+  link?: string; 
   aQuemSeDestina: string;
   conteudoProgramatico: {
     modulo: string;
@@ -17,6 +18,7 @@ export const Tributario: Curso[] = [
     slug: 'contabilidade-societaria-e-tributaria',
     titulo: 'Contabilidade Societária e Tributária',
     cargaHoraria: '28h',
+    link: "https://lastlink.com/p/CACAB84B3/",
     instrutor: 'Lourivaldo Lopes da Silva',
     modalidade: 'EAD',
     objetivo: `
@@ -76,6 +78,7 @@ export const Tributario: Curso[] = [
   {
     slug: 'contabilidade-de-consorcio',
     titulo: 'Contabilidade de Consórcio',
+    link: "https://lastlink.com/p/C81596BEA/",
     cargaHoraria: '8h',
     instrutor: 'Lourivaldo Lopes da Silva',
     modalidade: 'EAD',
@@ -132,6 +135,7 @@ export const Tributario: Curso[] = [
     slug: 'contabilidade-tributaria-na-atividade-imobiliaria',
     titulo: 'Contabilidade Tributária na Atividade Imobiliária',
     cargaHoraria: '8h',
+    link: "https://lastlink.com/p/C9AE4222D/",
     instrutor: 'Lourivaldo Lopes da Silva',
     modalidade: 'EAD',
     objetivo: `
@@ -198,6 +202,7 @@ export const Tributario: Curso[] = [
     cargaHoraria: '8h',
     instrutor: 'Lourivaldo Lopes da Silva',
     modalidade: 'EAD',
+    link: "https://lastlink.com/p/C3BB92924/",
     objetivo: `
         Orientar os profissionais sobre a obrigatoriedade do e-LALUR / LACS, itens que devem ser ajustados para fins tributários (adições e exclusões), itens com ajustes permanentes e ajustes temporários, aplicar a exata demonstração do lucro real (trimestral ou anual). Demonstrar a exata escrituração do e-LALUR/LACS.
       `,
@@ -255,6 +260,7 @@ export const Tributario: Curso[] = [
   {
     slug: 'tributos-diferidos-lucro-real-e-lucro-presumido',
     titulo: 'Tributos Diferidos Lucro Real e Lucro Presumido',
+    link: "https://lastlink.com/p/CC34B5EE0/",
     cargaHoraria: '8h',
     instrutor: 'Lourivaldo Lopes da Silva',
     modalidade: 'EAD',
@@ -363,10 +369,12 @@ export const Tributario: Curso[] = [
         ],
       },
     ],
+    link: "https://lastlink.com/p/C0E17EF16/"
   },
   {
     slug: 'lucro-real-lucro-presumido-e-lucro-arbitrado',
     titulo: 'Lucro Real, Lucro Presumido e Lucro Arbitrado',
+    link: "https://lastlink.com/p/CE1B45F83/",
     cargaHoraria: '16h',
     instrutor: 'Lourivaldo Lopes da Silva',
     modalidade: 'EAD',
@@ -435,6 +443,7 @@ export const Tributario: Curso[] = [
     slug: 'lucro-real-avancado',
     titulo: 'Lucro Real Avançado',
     cargaHoraria: '24h',
+    link: "https://lastlink.com/p/C1BF18E04/",
     instrutor: 'Lourivaldo Lopes da Silva',
     modalidade: 'EAD',
     objetivo: `
@@ -531,6 +540,7 @@ export const Tributario: Curso[] = [
   {
     slug: 'rotina-de-encerramento-de-balanco',
     titulo: 'Rotinas de Encerramento de Balanço',
+    link: "https://lastlink.com/p/CBF77A6D0/",
     cargaHoraria: '8h',
     instrutor: 'Lourivaldo Lopes da Silva',
     modalidade: 'EAD',
