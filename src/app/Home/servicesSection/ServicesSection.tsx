@@ -9,32 +9,32 @@ const services = [
   {
     title: "Auditoria",
     description: "Auditamos as demonstrações contábeis e financeiras com o objetivo de avaliar se estão representando a real situação patrimonial e se estão de acordo com os princípios fundamentais da nova contabilidade e da legislação fiscal.",
-    link: "/servicos#desenvolvimento-web",
+    link: "/servicos",
   },
   {
     title: "Due Diligence",
     description: "Estamos capacitados para auxiliar na determinação de preços de negociação de quotas ou ações entre sociedade, bem como na orientação a respeito de fusão, cisão ou incorporação de empresas.",
-    link: "/servicos#consultoria-digital",
+    link: "/servicos",
   },
   {
     title: "Planejamento contábil e tributário",
     description: "Através de técnicas específicas, nossos profissionais avaliam de forma legal, a possibilidade de redução da carga tributária da empresas, maximizando os resultados e o retorno de investimento dos sócios.",
-    link: "/servicos#seo-marketing-digital",
+    link: "/servicos",
   },
   {
     title: "Transfer Price",
     description: "No setor, somos considerados uma das empresas mais conceituadas no assunto. Oferecemos por meio de software a melhor gestão nas operações de importação/exportação sujeitas ao Transfer Price.",
-    link: "/servicos#ecommerce",
+    link: "/servicos",
   },
   {
     title: "Revisão Contábil e tributária",
     description: "Tem o objetivo principal averiguar se a apuração e recolhimento dos referidos tributos estão de acordo com a legislação. Buscamos sobretudo, encontrar oportunidades para que, se possível, a carga tributária seja reduzida.",
-    link: "/servicos#desenvolvimento-de-apps",
+    link: "/servicos",
   },
   {
     title: "Recuperação de tributos",
     description: "Nossa equipe está preparada para efetuar um levantamento em toda a documentação pertinente aos recolhimentos tributários e fazer os devidos ajustes de compensação, com ou sem ação judicial, oxigenando dessa forma o financeiro das empresas.",
-    link: "/servicos#design-ux-ui",
+    link: "/servicos",
   },
 ];
 
